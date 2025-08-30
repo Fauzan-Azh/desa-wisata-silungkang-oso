@@ -328,7 +328,7 @@ export default function Home() {
                       {/* History Stats */}
                       <div className="text-center">
                         <div className="flex justify-center mb-3">
-                          <svg className="w-10 h-10 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-10 h-10 text-[#ffd704]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                           </svg>
                         </div>
@@ -368,7 +368,7 @@ export default function Home() {
                     </div>
                     
                     {/* Songket Info */}
-                    <div className="border-l-4 border-orange-500 pl-6">
+                    <div className="border-l-4 border-[#ffd704] pl-6">
                       <h4 className="text-xl font-bold mb-3 text-gray-800 font-poppins">
                         {lang === 'id' ? 'Songket Silungkang' : 'Silungkang Songket'}
                       </h4>
@@ -468,7 +468,7 @@ export default function Home() {
                 </div>
 
                 {/* Visi Misi */}
-                <div className="bg-gradient-to-r from-orange-500 to-red-600 rounded-2xl p-8 shadow-xl">
+                <div className="bg-gradient-to-r from-[#102467] to-[#102467]/80 rounded-2xl p-8 shadow-xl">
                   <h3 className="text-2xl font-bold text-center mb-8 text-white font-poppins">
                     {lang === 'id' ? 'Visi & Misi Desa Wisata' : 'Tourism Village Vision & Mission'}
                   </h3>
