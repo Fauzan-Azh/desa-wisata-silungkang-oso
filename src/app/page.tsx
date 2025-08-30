@@ -298,50 +298,53 @@ export default function Home() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                   {/* Left Column - Text & Data */}
                   <div>
-                    <div className="prose prose-lg max-w-none text-gray-700 font-poppins leading-relaxed mb-8 text-justify">
-                      {lang === 'id' ? (
-                        <>
-                          <p className="mb-4">
-                            Desa Silungkang Oso merupakan bagian dari <strong>Kecamatan Silungkang, Kota Sawahlunto, Sumatera Barat</strong>. Kawasan ini memiliki sejarah panjang yang erat kaitannya dengan perjuangan rakyat. Pada <strong>1 Januari 1927</strong>, terjadi sebuah peristiwa besar yang dikenal dengan <strong>Pemberontakan Silungkang</strong>, yaitu perlawanan buruh dan masyarakat terhadap pemerintahan kolonial Belanda. Pemberontakan ini menjadi salah satu tonggak penting dalam sejarah perjuangan kemerdekaan Indonesia, karena menegaskan semangat perlawanan kaum buruh tambang dan masyarakat setempat.
-                          </p>
-                          <p className="mb-4">
-                            Asal-usul nama <strong>Silungkang</strong> sendiri masih menjadi perdebatan. Beberapa sumber menyebutkan nama ini berasal dari seorang tokoh atau lurah bernama <strong>Lungkang</strong>, sementara pendapat lain mengaitkannya dengan istilah lokal dalam bahasa <strong>Minangkabau</strong>. Selain sejarah perjuangan, kawasan Silungkang juga menyimpan jejak peninggalan kolonial, seperti rumah-rumah bergaya <strong>Belanda</strong> serta infrastruktur bersejarah, termasuk <strong>jembatan gantung tanpa tiang penyangga</strong> yang hingga kini masih digunakan masyarakat.
-                          </p>
-                          <h4 className="text-xl font-bold mb-3 text-gray-800 font-poppins">
-                            Budaya dan Kearifan Lokal
-                          </h4>
-                          <p className="mb-4">
-                            Masyarakat Desa Silungkang Oso dikenal memiliki budaya yang kuat dan terjaga. Salah satu warisan budaya paling terkenal adalah <strong>tenun songket Silungkang</strong>, yang sudah diwariskan secara turun-temurun sejak ratusan tahun lalu. Songket Silungkang memiliki keindahan dan kualitas yang setara dengan songket Pandai Sikek, bahkan menjadi salah satu identitas budaya penting Kota Sawahlunto.
-                          </p>
-                          <p>
-                            Selain itu, masyarakat masih memelihara berbagai tradisi adat, seperti <strong>pidato adat, taktumbin, turun mandi, bakau, dan manjalang mintuo</strong>. Dalam bidang kesenian, Silungkang Oso dikenal dengan <strong>randai</strong> serta <strong>talempong botuang</strong>, yang telah ditetapkan sebagai <strong>Warisan Budaya Takbenda Indonesia</strong> oleh Kementerian Pendidikan dan Kebudayaan.
-                          </p>
-                          <p className="mt-4">
-                            Kearifan lokal yang terjaga ini tidak hanya memperkuat identitas budaya masyarakat, tetapi juga memberikan daya tarik tersendiri bagi wisatawan yang berkunjung, sehingga menjadikan Silungkang Oso sebagai salah satu destinasi budaya dan sejarah yang penting di Sumatera Barat.
-                          </p>
-                        </>
-                      ) : (
-                        <>
-                          <p className="mb-4">
-                            Silungkang Oso Village is part of <strong>Silungkang District, Sawahlunto City, West Sumatra</strong>. This area has a long history closely related to the people&apos;s struggle. On <strong>January 1, 1927</strong>, a major event known as the <strong>Silungkang Rebellion</strong> occurred, which was a resistance by workers and the community against the Dutch colonial government. This rebellion became one of the important milestones in the history of Indonesia&apos;s independence struggle, as it affirmed the spirit of resistance of the mining workers and local community.
-                          </p>
-                          <p className="mb-4">
-                            The origin of the name <strong>Silungkang</strong> itself is still debated. Some sources mention that this name comes from a figure or village head named <strong>Lungkang</strong>, while other opinions associate it with local terms in the <strong>Minangkabau</strong> language. Besides the history of struggle, the Silungkang area also preserves traces of colonial heritage, such as <strong>Dutch-style houses</strong> and historical infrastructure, including a <strong>suspension bridge without support pillars</strong> that is still used by the community today.
-                          </p>
-                          <h4 className="text-xl font-bold mb-3 text-gray-800 font-poppins">
-                            Culture and Local Wisdom
-                          </h4>
-                          <p className="mb-4">
-                            The people of Silungkang Oso Village are known for their strong and well-preserved culture. One of the most famous cultural heritages is <strong>Silungkang songket weaving</strong>, which has been passed down from generation to generation for hundreds of years. Silungkang songket has beauty and quality equivalent to Pandai Sikek songket, even becoming one of the important cultural identities of Sawahlunto City.
-                          </p>
-                          <p>
-                            In addition, the community still maintains various traditional customs, such as <strong>traditional speeches, taktumbin, turun mandi, bakau, and manjalang mintuo</strong>. In the field of arts, Silungkang Oso is known for <strong>randai</strong> and <strong>talempong botuang</strong>, which have been designated as <strong>Indonesian Intangible Cultural Heritage</strong> by the Ministry of Education and Culture.
-                          </p>
-                          <p className="mt-4">
-                            This preserved local wisdom not only strengthens the cultural identity of the community, but also provides its own attraction for visiting tourists, making Silungkang Oso one of the important cultural and historical destinations in West Sumatra.
-                          </p>
-                        </>
-                      )}
+                    {/* Scrollable Content Container */}
+                    <div className="max-h-80 overflow-y-auto p-4 mb-8">
+                      <div className="prose prose-lg max-w-none text-gray-700 font-poppins leading-relaxed text-justify">
+                        {lang === 'id' ? (
+                          <>
+                            <p className="mb-4">
+                              Desa Silungkang Oso merupakan bagian dari <strong>Kecamatan Silungkang, Kota Sawahlunto, Sumatera Barat</strong>. Kawasan ini memiliki sejarah panjang yang erat kaitannya dengan perjuangan rakyat. Pada <strong>1 Januari 1927</strong>, terjadi sebuah peristiwa besar yang dikenal dengan <strong>Pemberontakan Silungkang</strong>, yaitu perlawanan buruh dan masyarakat terhadap pemerintahan kolonial Belanda. Pemberontakan ini menjadi salah satu tonggak penting dalam sejarah perjuangan kemerdekaan Indonesia, karena menegaskan semangat perlawanan kaum buruh tambang dan masyarakat setempat.
+                            </p>
+                            <p className="mb-4">
+                              Asal-usul nama <strong>Silungkang</strong> sendiri masih menjadi perdebatan. Beberapa sumber menyebutkan nama ini berasal dari seorang tokoh atau lurah bernama <strong>Lungkang</strong>, sementara pendapat lain mengaitkannya dengan istilah lokal dalam bahasa <strong>Minangkabau</strong>. Selain sejarah perjuangan, kawasan Silungkang juga menyimpan jejak peninggalan kolonial, seperti rumah-rumah bergaya <strong>Belanda</strong> serta infrastruktur bersejarah, termasuk <strong>jembatan gantung tanpa tiang penyangga</strong> yang hingga kini masih digunakan masyarakat.
+                            </p>
+                            <h4 className="text-xl font-bold mb-3 text-gray-800 font-poppins">
+                              Budaya dan Kearifan Lokal
+                            </h4>
+                            <p className="mb-4">
+                              Masyarakat Desa Silungkang Oso dikenal memiliki budaya yang kuat dan terjaga. Salah satu warisan budaya paling terkenal adalah <strong>tenun songket Silungkang</strong>, yang sudah diwariskan secara turun-temurun sejak ratusan tahun lalu. Songket Silungkang memiliki keindahan dan kualitas yang setara dengan songket Pandai Sikek, bahkan menjadi salah satu identitas budaya penting Kota Sawahlunto.
+                            </p>
+                            <p>
+                              Selain itu, masyarakat masih memelihara berbagai tradisi adat, seperti <strong>pidato adat, taktumbin, turun mandi, bakau, dan manjalang mintuo</strong>. Dalam bidang kesenian, Silungkang Oso dikenal dengan <strong>randai</strong> serta <strong>talempong botuang</strong>, yang telah ditetapkan sebagai <strong>Warisan Budaya Takbenda Indonesia</strong> oleh Kementerian Pendidikan dan Kebudayaan.
+                            </p>
+                            <p className="mt-4">
+                              Kearifan lokal yang terjaga ini tidak hanya memperkuat identitas budaya masyarakat, tetapi juga memberikan daya tarik tersendiri bagi wisatawan yang berkunjung, sehingga menjadikan Silungkang Oso sebagai salah satu destinasi budaya dan sejarah yang penting di Sumatera Barat.
+                            </p>
+                          </>
+                        ) : (
+                          <>
+                            <p className="mb-4">
+                              Silungkang Oso Village is part of <strong>Silungkang District, Sawahlunto City, West Sumatra</strong>. This area has a long history closely related to the people&apos;s struggle. On <strong>January 1, 1927</strong>, a major event known as the <strong>Silungkang Rebellion</strong> occurred, which was a resistance by workers and the community against the Dutch colonial government. This rebellion became one of the important milestones in the history of Indonesia&apos;s independence struggle, as it affirmed the spirit of resistance of the mining workers and local community.
+                            </p>
+                            <p className="mb-4">
+                              The origin of the name <strong>Silungkang</strong> itself is still debated. Some sources mention that this name comes from a figure or village head named <strong>Lungkang</strong>, while other opinions associate it with local terms in the <strong>Minangkabau</strong> language. Besides the history of struggle, the Silungkang area also preserves traces of colonial heritage, such as <strong>Dutch-style houses</strong> and historical infrastructure, including a <strong>suspension bridge without support pillars</strong> that is still used by the community today.
+                            </p>
+                            <h4 className="text-xl font-bold mb-3 text-gray-800 font-poppins">
+                              Culture and Local Wisdom
+                            </h4>
+                            <p className="mb-4">
+                              The people of Silungkang Oso Village are known for their strong and well-preserved culture. One of the most famous cultural heritages is <strong>Silungkang songket weaving</strong>, which has been passed down from generation to generation for hundreds of years. Silungkang songket has beauty and quality equivalent to Pandai Sikek songket, even becoming one of the important cultural identities of Sawahlunto City.
+                            </p>
+                            <p>
+                              In addition, the community still maintains various traditional customs, such as <strong>traditional speeches, taktumbin, turun mandi, bakau, and manjalang mintuo</strong>. In the field of arts, Silungkang Oso is known for <strong>randai</strong> and <strong>talempong botuang</strong>, which have been designated as <strong>Indonesian Intangible Cultural Heritage</strong> by the Ministry of Education and Culture.
+                            </p>
+                            <p className="mt-4">
+                              This preserved local wisdom not only strengthens the cultural identity of the community, but also provides its own attraction for visiting tourists, making Silungkang Oso one of the important cultural and historical destinations in West Sumatra.
+                            </p>
+                          </>
+                        )}
+                      </div>
                     </div>
                     
                     {/* Data Stats */}
