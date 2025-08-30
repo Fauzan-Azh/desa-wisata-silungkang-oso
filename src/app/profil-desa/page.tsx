@@ -31,7 +31,7 @@ export default function ProfilDesa() {
                 <span className="text-white font-bold text-2xl font-poppins">G</span>
               </div>
               <span className="font-bold text-2xl font-poppins text-white">
-                GLOW-UP
+                Desa Wisata
               </span>
             </div>
 

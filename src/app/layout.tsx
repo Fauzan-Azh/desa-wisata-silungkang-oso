@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Wisata Glowup",
+  title: "Desa Wisata",
   description: "Website wisata yang menarik",
 };
 
