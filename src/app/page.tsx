@@ -669,12 +669,7 @@ export default function Home() {
                   <h3 className="text-2xl font-bold text-[#ffd704] mb-4 font-poppins">
                     {lang === 'id' ? 'Desa Wisata Silungkang Oso' : 'Silungkang Oso Tourism Village'}
                   </h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed font-poppins">
-                    {lang === 'id' 
-                      ? 'Nikmati keindahan alam, kekayaan budaya, dan kehangatan masyarakat di destinasi wisata terbaik Sumatera Barat.'
-                      : 'Enjoy the natural beauty, cultural richness, and warmth of the community in the best tourist destination in West Sumatra.'
-                    }
-                  </p>
+
                   
                   {/* Contact Info */}
                   <div className="space-y-3">
@@ -745,7 +740,7 @@ export default function Home() {
                     <li><a href="/pembelian-tiket" className="text-gray-300 hover:text-[#ffd704] transition-colors text-sm font-poppins">{lang === 'id' ? 'Pemesanan Tiket' : 'Ticket Booking'}</a></li>
                     <li><a href="/produk-lokal" className="text-gray-300 hover:text-[#ffd704] transition-colors text-sm font-poppins">{lang === 'id' ? 'UMKM & Souvenir' : 'MSMEs & Souvenirs'}</a></li>
                     <li><a href="#kuliner" className="text-gray-300 hover:text-[#ffd704] transition-colors text-sm font-poppins">{lang === 'id' ? 'Kuliner Khas' : 'Local Cuisine'}</a></li>
-                    <li><a href="#guide" className="text-gray-300 hover:text-[#ffd704] transition-colors text-sm font-poppins">{lang === 'id' ? 'Guide & Transport' : 'Guide & Transport'}</a></li>
+
                   </ul>
                 </div>
               </div>
