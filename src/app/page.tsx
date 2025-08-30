@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { useLanguage } from './_components/LanguageProvider';
 import LanguageToggle from './_components/LanguageToggle';
 
@@ -61,7 +62,7 @@ export default function Home() {
 
   // Language is handled by global provider
 
-  const navItems = lang === 'id'
+  const navItems = String(lang) === 'id'
     ? [
         { name: 'Beranda', href: '/' },
         { name: 'Profil Desa', href: '/profil-desa' },
@@ -185,17 +186,17 @@ export default function Home() {
               <div className="relative z-10 h-full flex items-center justify-center px-4">
                 <div className="text-center max-w-4xl mx-auto px-5 md:px-10">
                   <h1 className="text-4xl md:text-6xl font-bold mb-4 md:mb-6 text-white font-poppins drop-shadow-2xl text-transition">
-                    {lang === 'id' ? slides[activeIndex].title_id : slides[activeIndex].title_en}
+                    {String(lang) === 'id' ? slides[activeIndex].title_id : slides[activeIndex].title_en}
                   </h1>
                   <p className="text-base md:text-xl font-medium leading-relaxed text-white font-poppins drop-shadow-2xl text-transition">
-                    {lang === 'id' ? slides[activeIndex].desc_id : slides[activeIndex].desc_en}
+                    {String(lang) === 'id' ? slides[activeIndex].desc_id : slides[activeIndex].desc_en}
                   </p>
                   <div className="mt-6">
                     <a
                       href="/potensi-desa"
                       className="group relative overflow-hidden inline-flex items-center gap-2 bg-[#ffd704] hover:bg-[#ffd704]/90 text-white px-6 py-3 rounded-xl shadow-lg transition-all duration-300 ease-out backdrop-blur-sm font-poppins font-semibold hover:shadow-xl hover:scale-105 hover:-translate-y-0.5 outline-none before:absolute before:inset-0 before:-translate-x-full group-hover:before:translate-x-0 before:bg-gradient-to-r before:from-white/0 before:via-white/25 before:to-white/0 before:transition-transform before:duration-500 before:pointer-events-none"
                     >
-                      {lang === 'id' ? 'Kunjungi\u00a0\u00a0\u00a0Sekarang' : 'Visit\u00a0\u00a0\u00a0Now'}
+                      {String(lang) === 'id' ? 'Kunjungi\u00a0\u00a0\u00a0Sekarang' : 'Visit\u00a0\u00a0\u00a0Now'}
                       <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
@@ -210,7 +211,7 @@ export default function Home() {
           <section className="px-4 sm:px-6 lg:px-8 mb-16">
             <div className="max-w-7xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-800 font-poppins">
-                {lang === 'id' ? 'Tentang Desa Silungkang Oso' : 'About Silungkang Oso Village'}
+                {String(lang) === 'id' ? 'Tentang Desa Silungkang Oso' : 'About Silungkang Oso Village'}
               </h2>
               
               {/* Deskripsi Utama dengan Video Profil */}
@@ -219,7 +220,7 @@ export default function Home() {
                   {/* Kolom Kiri - Deskripsi */}
                   <div className="flex justify-center">
                     <div className="prose prose-lg max-w-none text-gray-700 font-poppins leading-relaxed text-justify">
-                      {lang === 'id' ? (
+                      {String(lang) === 'id' ? (
                         <>
                           <p className="mb-4">
                           Desa Silungkang Oso terletak di Kecamatan Silungkang, Kota Sawahlunto, Sumatera Barat, dengan luas wilayah sekitar 6,57 km². Desa ini berjarak sekitar 78 km dari Kota Padang dengan waktu tempuh sekitar 2 jam menggunakan kendaraan roda empat. Desa ini berada pada ketinggian antara 267 hingga 710 meter di atas permukaan laut, dengan suhu udara tahunan sekitar 22°C, sehingga memiliki iklim yang sejuk dan nyaman.
@@ -228,7 +229,7 @@ export default function Home() {
                           {/* Kondisi Geografis */}
                           <div className="mb-6">
                             <h4 className="text-lg font-bold mb-4 text-gray-800 font-poppins text-center">
-                              {lang === 'id' ? 'Kondisi Geografis' : 'Geographic Conditions'}
+                              {String(lang) === 'id' ? 'Kondisi Geografis' : 'Geographic Conditions'}
                             </h4>
                             
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -241,12 +242,12 @@ export default function Home() {
                                   </svg>
                                 </div>
                                 <h5 className="text-sm font-bold mb-2 text-gray-800 font-poppins">
-                                  {lang === 'id' ? 'Lokasi' : 'Location'}
+                                  {String(lang) === 'id' ? 'Lokasi' : 'Location'}
                                 </h5>
                                 <div className="space-y-1 text-gray-600 font-poppins text-xs">
-                                  <div>{lang === 'id' ? 'Kecamatan Silungkang' : 'Silungkang District'}</div>
-                                  <div>{lang === 'id' ? 'Kota Sawahlunto' : 'Sawahlunto City'}</div>
-                                  <div>{lang === 'id' ? 'Sumatera Barat' : 'West Sumatra'}</div>
+                                  <div>{String(lang) === 'id' ? 'Kecamatan Silungkang' : 'Silungkang District'}</div>
+                                  <div>{String(lang) === 'id' ? 'Kota Sawahlunto' : 'Sawahlunto City'}</div>
+                                  <div>{String(lang) === 'id' ? 'Sumatera Barat' : 'West Sumatra'}</div>
                                 </div>
                               </div>
 
@@ -258,7 +259,7 @@ export default function Home() {
                                   </svg>
                                 </div>
                                 <h5 className="text-sm font-bold mb-2 text-gray-800 font-poppins">
-                                  {lang === 'id' ? 'Luas Wilayah' : 'Area'}
+                                  {String(lang) === 'id' ? 'Luas Wilayah' : 'Area'}
                                 </h5>
                                 <div className="space-y-1 text-gray-600 font-poppins text-xs">
                                   <div>6,57 km²</div>
@@ -273,12 +274,12 @@ export default function Home() {
                                   </svg>
                                 </div>
                                 <h5 className="text-sm font-bold mb-2 text-gray-800 font-poppins">
-                                  {lang === 'id' ? 'Ketinggian' : 'Altitude'}
+                                  {String(lang) === 'id' ? 'Ketinggian' : 'Altitude'}
                                 </h5>
                                 <div className="space-y-1 text-gray-600 font-poppins text-xs">
                                   <div>267-710 mdpl</div>
-                                  <div>{lang === 'id' ? 'iklim sejuk' : 'cool climate'}</div>
-                                  <div>{lang === 'id' ? 'suhu 22°C' : 'temperature 22°C'}</div>
+                                  <div>{String(lang) === 'id' ? 'iklim sejuk' : 'cool climate'}</div>
+                                  <div>{String(lang) === 'id' ? 'suhu 22°C' : 'temperature 22°C'}</div>
                                 </div>
                               </div>
                             </div>
@@ -299,7 +300,7 @@ export default function Home() {
                               </div>
                               <div className="text-3xl font-bold text-gray-800 font-poppins mb-2">300+</div>
                               <div className="text-sm text-gray-600 font-poppins">
-                                {lang === 'id' ? 'Tahun Sejarah' : 'Years of History'}
+                                {String(lang) === 'id' ? 'Tahun Sejarah' : 'Years of History'}
                               </div>
                             </div>
                             
@@ -312,7 +313,7 @@ export default function Home() {
                             </div>
                             <div className="text-3xl font-bold text-gray-800 font-poppins mb-2">1.574</div>
                             <div className="text-sm text-gray-600 font-poppins">
-                              {lang === 'id' ? 'Jiwa Penduduk' : 'Population'}
+                              {String(lang) === 'id' ? 'Jiwa Penduduk' : 'Population'}
                             </div>
                             </div>
                           </div>
@@ -326,7 +327,7 @@ export default function Home() {
                           {/* Kondisi Geografis */}
                           <div className="mb-6">
                             <h4 className="text-lg font-bold mb-4 text-gray-800 font-poppins text-center">
-                              {lang === 'id' ? 'Kondisi Geografis' : 'Geographic Conditions'}
+                              {String(lang) === 'id' ? 'Kondisi Geografis' : 'Geographic Conditions'}
                             </h4>
                             
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -339,12 +340,12 @@ export default function Home() {
                                   </svg>
                                 </div>
                                 <h5 className="text-sm font-bold mb-2 text-gray-800 font-poppins">
-                                  {lang === 'id' ? 'Lokasi' : 'Location'}
+                                  {String(lang) === 'id' ? 'Lokasi' : 'Location'}
                                 </h5>
                                 <div className="space-y-1 text-gray-600 font-poppins text-xs">
-                                  <div>{lang === 'id' ? 'Kecamatan Silungkang' : 'Silungkang District'}</div>
-                                  <div>{lang === 'id' ? 'Kota Sawahlunto' : 'Sawahlunto City'}</div>
-                                  <div>{lang === 'id' ? 'Sumatera Barat' : 'West Sumatra'}</div>
+                                  <div>{String(lang) === 'id' ? 'Kecamatan Silungkang' : 'Silungkang District'}</div>
+                                  <div>{String(lang) === 'id' ? 'Kota Sawahlunto' : 'Sawahlunto City'}</div>
+                                  <div>{String(lang) === 'id' ? 'Sumatera Barat' : 'West Sumatra'}</div>
                                 </div>
                               </div>
 
@@ -356,7 +357,7 @@ export default function Home() {
                                   </svg>
                                 </div>
                                 <h5 className="text-sm font-bold mb-2 text-gray-800 font-poppins">
-                                  {lang === 'id' ? 'Luas Wilayah' : 'Area'}
+                                  {String(lang) === 'id' ? 'Luas Wilayah' : 'Area'}
                                 </h5>
                                 <div className="space-y-1 text-gray-600 font-poppins text-xs">
                                   <div>6,57 km²</div>
@@ -371,12 +372,12 @@ export default function Home() {
                                   </svg>
                                 </div>
                                 <h5 className="text-sm font-bold mb-2 text-gray-800 font-poppins">
-                                  {lang === 'id' ? 'Ketinggian' : 'Altitude'}
+                                  {String(lang) === 'id' ? 'Ketinggian' : 'Altitude'}
                                 </h5>
                                 <div className="space-y-1 text-gray-600 font-poppins text-xs">
                                   <div>267-710 mdpl</div>
-                                  <div>{lang === 'id' ? 'iklim sejuk' : 'cool climate'}</div>
-                                  <div>{lang === 'id' ? 'suhu 22°C' : 'temperature 22°C'}</div>
+                                  <div>{String(lang) === 'id' ? 'iklim sejuk' : 'cool climate'}</div>
+                                  <div>{String(lang) === 'id' ? 'suhu 22°C' : 'temperature 22°C'}</div>
                                 </div>
                               </div>
                             </div>
@@ -397,7 +398,7 @@ export default function Home() {
                               </div>
                               <div className="text-3xl font-bold text-gray-800 font-poppins mb-2">300+</div>
                               <div className="text-sm text-gray-600 font-poppins">
-                                {lang === 'id' ? 'Tahun Sejarah' : 'Years of History'}
+                                {String(lang) === 'id' ? 'Tahun Sejarah' : 'Years of History'}
                               </div>
                             </div>
                             
@@ -410,7 +411,7 @@ export default function Home() {
                             </div>
                             <div className="text-3xl font-bold text-gray-800 font-poppins mb-2">1.574</div>
                             <div className="text-sm text-gray-600 font-poppins">
-                              {lang === 'id' ? 'Jiwa Penduduk' : 'Population'}
+                              {String(lang) === 'id' ? 'Jiwa Penduduk' : 'Population'}
                             </div>
                             </div>
                           </div>
@@ -422,7 +423,7 @@ export default function Home() {
                   {/* Kolom Kanan - Video Profil */}
                   <div>
                     <h3 className="text-xl font-semibold mb-4 text-gray-800 font-poppins">
-                      {lang === 'id' ? 'Video Profil Desa' : 'Village Profile Video'}
+                      {String(lang) === 'id' ? 'Video Profil Desa' : 'Village Profile Video'}
                     </h3>
                     <div className="relative bg-gray-100 rounded-lg overflow-hidden shadow-lg">
                       {/* Video Placeholder */}
@@ -432,10 +433,10 @@ export default function Home() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
                           <p className="text-sm font-medium">
-                            {lang === 'id' ? 'Video Profil Akan Segera Hadir' : 'Profile Video Coming Soon'}
+                            {String(lang) === 'id' ? 'Video Profil Akan Segera Hadir' : 'Profile Video Coming Soon'}
                           </p>
                           <p className="text-xs mt-1 opacity-75">
-                            {lang === 'id' ? 'Tempat untuk video profil desa' : 'Place for village profile video'}
+                            {String(lang) === 'id' ? 'Tempat untuk video profil desa' : 'Place for village profile video'}
                           </p>
                         </div>
                       </div>
@@ -458,7 +459,7 @@ export default function Home() {
                     
                     {/* Video Description */}
                     <div className="mt-4 text-sm text-gray-600 font-poppins">
-                      {lang === 'id' ? (
+                      {String(lang) === 'id' ? (
                         <p>
                           Video profil ini akan menampilkan keindahan alam, kekayaan budaya, dan kehidupan masyarakat Desa Silungkang Oso yang penuh dengan tradisi dan kearifan lokal.
                         </p>
@@ -476,7 +477,7 @@ export default function Home() {
               {/* Sejarah & Budaya Section */}
               <div className="mb-12">
                 <h3 className="text-2xl font-bold mb-8 text-gray-800 font-poppins">
-                  {lang === 'id' ? 'Sejarah dan Budaya Silungkang Oso' : 'History and Culture of Silungkang Oso'}
+                  {String(lang) === 'id' ? 'Sejarah dan Budaya Silungkang Oso' : 'History and Culture of Silungkang Oso'}
                 </h3>
                 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -485,7 +486,7 @@ export default function Home() {
                     {/* Scrollable Content Container */}
                     <div className="max-h-80 overflow-y-auto p-4 mb-8">
                       <div className="prose prose-lg max-w-none text-gray-700 font-poppins leading-relaxed text-justify">
-                      {lang === 'id' ? (
+                      {String(lang) === 'id' ? (
                         <>
                           <p className="mb-4">
                               Desa Silungkang Oso merupakan bagian dari <strong>Kecamatan Silungkang, Kota Sawahlunto, Sumatera Barat</strong>. Kawasan ini memiliki sejarah panjang yang erat kaitannya dengan perjuangan rakyat. Pada <strong>1 Januari 1927</strong>, terjadi sebuah peristiwa besar yang dikenal dengan <strong>Pemberontakan Silungkang</strong>, yaitu perlawanan buruh dan masyarakat terhadap pemerintahan kolonial Belanda. Pemberontakan ini menjadi salah satu tonggak penting dalam sejarah perjuangan kemerdekaan Indonesia, karena menegaskan semangat perlawanan kaum buruh tambang dan masyarakat setempat.
@@ -543,7 +544,7 @@ export default function Home() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
                         <p className="text-sm">
-                          {lang === 'id' ? 'Gambar/Video' : 'Image/Video'}
+                          {String(lang) === 'id' ? 'Gambar/Video' : 'Image/Video'}
                         </p>
                       </div>
                     </div>
@@ -551,10 +552,10 @@ export default function Home() {
                     {/* Songket Info */}
                     <div className="border-l-4 border-[#ffd704] pl-6">
                       <h4 className="text-xl font-bold mb-3 text-gray-800 font-poppins">
-                        {lang === 'id' ? 'Songket Silungkang' : 'Silungkang Songket'}
+                        {String(lang) === 'id' ? 'Songket Silungkang' : 'Silungkang Songket'}
                       </h4>
                       <p className="text-gray-600 font-poppins leading-relaxed">
-                        {lang === 'id' 
+                        {String(lang) === 'id' 
                           ? 'Kerajinan songket dengan motif khas yang menjadi warisan budaya tak ternilai'
                           : 'Songket craft with distinctive motifs that is an invaluable cultural heritage'
                         }
@@ -572,12 +573,14 @@ export default function Home() {
                 {/* Peta Wisata */}
                 <div>
                   <h3 className="text-xl font-semibold mb-4 text-gray-800 font-poppins text-center">
-                    {lang === 'id' ? 'Peta Wisata' : 'Tourism Map'}
+                    {String(lang) === 'id' ? 'Peta Wisata' : 'Tourism Map'}
                   </h3>
                   <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img 
+                    <Image 
                       src="/image/peta/map-silungkang-oso.jpg" 
-                      alt={lang === 'id' ? 'Peta Wisata Desa Silungkang Oso' : 'Silungkang Oso Tourism Map'}
+                      alt={String(lang) === 'id' ? 'Peta Wisata Desa Silungkang Oso' : 'Silungkang Oso Tourism Map'}
+                      width={800}
+                      height={600}
                       className="w-full h-auto object-cover"
                     />
                   </div>
@@ -586,27 +589,27 @@ export default function Home() {
                 {/* Struktur Pokdarwis */}
                 <div>
                   <h3 className="text-xl font-semibold mb-4 text-gray-800 font-poppins">
-                    {lang === 'id' ? 'Struktur Pokdarwis' : 'Pokdarwis Structure'}
+                    {String(lang) === 'id' ? 'Struktur Pokdarwis' : 'Pokdarwis Structure'}
                   </h3>
                   <div className="text-gray-600">
-                    {lang === 'id' ? 'Konten menyusul.' : 'Content coming soon.'}
+                    {String(lang) === 'id' ? 'Konten menyusul.' : 'Content coming soon.'}
                   </div>
                 </div>
 
                 {/* Visi Misi */}
                 <div className="bg-gradient-to-r from-[#102467] to-[#102467]/80 rounded-2xl p-8 shadow-xl">
                   <h3 className="text-2xl font-bold text-center mb-8 text-white font-poppins">
-                    {lang === 'id' ? 'Visi & Misi Desa Wisata' : 'Tourism Village Vision & Mission'}
+                    {String(lang) === 'id' ? 'Visi & Misi Desa Wisata' : 'Tourism Village Vision & Mission'}
                   </h3>
                   
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {/* Visi */}
                     <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6">
                       <h4 className="text-xl font-bold mb-4 text-white font-poppins">
-                        {lang === 'id' ? 'Visi' : 'Vision'}
+                        {String(lang) === 'id' ? 'Visi' : 'Vision'}
                       </h4>
                       <p className="text-white text-sm leading-relaxed font-poppins">
-                        {lang === 'id' 
+                        {String(lang) === 'id' 
                           ? 'Menjadi desa wisata berkelanjutan yang memadukan pelestarian budaya Minangkabau, pemberdayaan ekonomi kreatif, dan digitalisasi pariwisata untuk kesejahteraan masyarakat.'
                           : 'To become a sustainable tourism village that integrates the preservation of Minangkabau culture, empowerment of the creative economy, and digitalization of tourism for the welfare of the community.'
                         }
@@ -616,13 +619,13 @@ export default function Home() {
                     {/* Misi */}
                     <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6">
                       <h4 className="text-xl font-bold mb-4 text-white font-poppins">
-                        {lang === 'id' ? 'Misi' : 'Mission'}
+                        {String(lang) === 'id' ? 'Misi' : 'Mission'}
                       </h4>
                       <ul className="text-white text-sm space-y-2 font-poppins">
                         <li className="flex items-start">
                           <span className="text-white mr-2">•</span>
                           <span>
-                            {lang === 'id' 
+                            {String(lang) === 'id' 
                               ? 'Mengembangkan wisata alam dan budaya berkelanjutan'
                               : 'Develop sustainable nature and cultural tourism'
                             }
@@ -631,7 +634,7 @@ export default function Home() {
                         <li className="flex items-start">
                           <span className="text-white mr-2">•</span>
                           <span>
-                            {lang === 'id' 
+                            {String(lang) === 'id' 
                               ? 'Memberdayakan UMKM dan ekonomi kreatif lokal'
                               : 'Empower local MSMEs and creative economy'
                             }
@@ -640,7 +643,7 @@ export default function Home() {
                         <li className="flex items-start">
                           <span className="text-white mr-2">•</span>
                           <span>
-                            {lang === 'id' 
+                            {String(lang) === 'id' 
                               ? 'Melestarikan warisan budaya Minangkabau'
                               : 'Preserve Minangkabau cultural heritage'
                             }
@@ -649,7 +652,7 @@ export default function Home() {
                         <li className="flex items-start">
                           <span className="text-white mr-2">•</span>
                           <span>
-                            {lang === 'id' 
+                            {String(lang) === 'id' 
                               ? 'Digitalisasi promosi dan layanan wisata'
                               : 'Digitalization of tourism promotion and services'
                             }
@@ -667,10 +670,10 @@ export default function Home() {
           <section className="px-4 sm:px-6 lg:px-8 mb-16">
             <div className="max-w-7xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-800 font-poppins">
-                {lang === 'id' ? 'Destinasi Wisata' : 'Tourist Destinations'}
+                {String(lang) === 'id' ? 'Destinasi Wisata' : 'Tourist Destinations'}
               </h2>
               <div className="text-center text-gray-600">
-                {lang === 'id' ? 'Konten menyusul.' : 'Content coming soon.'}
+                {String(lang) === 'id' ? 'Konten menyusul.' : 'Content coming soon.'}
               </div>
             </div>
           </section>
@@ -679,10 +682,10 @@ export default function Home() {
           <section className="px-4 sm:px-6 lg:px-8 mb-16">
             <div className="max-w-7xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-800 font-poppins">
-                {lang === 'id' ? 'Budaya dan Tradisi' : 'Culture and Traditions'}
+                {String(lang) === 'id' ? 'Budaya dan Tradisi' : 'Culture and Traditions'}
               </h2>
               <div className="text-center text-gray-600">
-                {lang === 'id' ? 'Konten menyusul.' : 'Content coming soon.'}
+                {String(lang) === 'id' ? 'Konten menyusul.' : 'Content coming soon.'}
               </div>
             </div>
           </section>
@@ -691,10 +694,10 @@ export default function Home() {
           <section className="px-4 sm:px-6 lg:px-8 mb-16">
             <div className="max-w-7xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-800 font-poppins">
-                {lang === 'id' ? 'Souvenir' : 'Souvenirs'}
+                {String(lang) === 'id' ? 'Souvenir' : 'Souvenirs'}
               </h2>
               <div className="text-center text-gray-600">
-                {lang === 'id' ? 'Konten menyusul.' : 'Content coming soon.'}
+                {String(lang) === 'id' ? 'Konten menyusul.' : 'Content coming soon.'}
               </div>
             </div>
           </section>
@@ -703,10 +706,10 @@ export default function Home() {
           <section className="px-4 sm:px-6 lg:px-8 mb-16">
             <div className="max-w-7xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-800 font-poppins">
-                {lang === 'id' ? 'Paket Wisata' : 'Tour Packages'}
+                {String(lang) === 'id' ? 'Paket Wisata' : 'Tour Packages'}
               </h2>
               <div className="text-center text-gray-600">
-                {lang === 'id' ? 'Konten menyusul.' : 'Content coming soon.'}
+                {String(lang) === 'id' ? 'Konten menyusul.' : 'Content coming soon.'}
               </div>
             </div>
           </section>
@@ -715,10 +718,10 @@ export default function Home() {
           <section className="px-4 sm:px-6 lg:px-8 mb-16">
             <div className="max-w-7xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-800 font-poppins">
-                {lang === 'id' ? 'Galeri' : 'Gallery'}
+                {String(lang) === 'id' ? 'Galeri' : 'Gallery'}
               </h2>
               <div className="text-center text-gray-600">
-                {lang === 'id' ? 'Konten menyusul.' : 'Content coming soon.'}
+                {String(lang) === 'id' ? 'Konten menyusul.' : 'Content coming soon.'}
               </div>
             </div>
           </section>
@@ -727,10 +730,10 @@ export default function Home() {
           <section className="px-4 sm:px-6 lg:px-8 mb-16">
             <div className="max-w-7xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-800 font-poppins">
-                {lang === 'id' ? 'Kontak Informasi' : 'Contact Information'}
+                {String(lang) === 'id' ? 'Kontak Informasi' : 'Contact Information'}
               </h2>
               <div className="text-center text-gray-600">
-                {lang === 'id' ? 'Konten menyusul.' : 'Content coming soon.'}
+                {String(lang) === 'id' ? 'Konten menyusul.' : 'Content coming soon.'}
               </div>
             </div>
           </section>
@@ -751,7 +754,7 @@ export default function Home() {
                     href="/paket-wisata"
                     className="group relative overflow-hidden inline-flex items-center gap-2 bg-[#ffd704] hover:bg-[#ffd704]/90 text-white px-6 py-3 rounded-xl shadow-lg transition-all duration-300 ease-out backdrop-blur-sm font-poppins font-semibold hover:shadow-xl hover:scale-105 hover:-translate-y-0.5 outline-none before:absolute before:inset-0 before:-translate-x-full group-hover:before:translate-x-0 before:bg-gradient-to-r before:from-white/0 before:via-white/25 before:to-white/0 before:transition-transform before:duration-500 before:pointer-events-none"
                   >
-                    {lang === 'id' ? 'Reservasi\u00a0\u00a0\u00a0Sekarang' : 'Reserve\u00a0\u00a0\u00a0Now'}
+                    {String(lang) === 'id' ? 'Reservasi\u00a0\u00a0\u00a0Sekarang' : 'Reserve\u00a0\u00a0\u00a0Now'}
                     <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -771,7 +774,7 @@ export default function Home() {
                 {/* Left Column - Brand & Contact */}
                 <div className="lg:col-span-1">
                   <h3 className="text-2xl font-bold text-[#ffd704] mb-4 font-poppins">
-                    {lang === 'id' ? 'Desa Wisata Silungkang Oso' : 'Silungkang Oso Tourism Village'}
+                    {String(lang) === 'id' ? 'Desa Wisata Silungkang Oso' : 'Silungkang Oso Tourism Village'}
                   </h3>
 
                   
@@ -824,38 +827,38 @@ export default function Home() {
                 {/* Tentang Desa */}
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-4 font-poppins">
-                    {lang === 'id' ? 'Tentang Desa' : 'About Village'}
+                    {String(lang) === 'id' ? 'Tentang Desa' : 'About Village'}
                   </h4>
                   <ul className="space-y-2">
-                    <li><a href="/profil-desa" className="text-gray-300 hover:text-[#ffd704] transition-colors text-sm font-poppins">{lang === 'id' ? 'Profil Desa Silungkang Oso' : 'Silungkang Oso Village Profile'}</a></li>
-                    <li><a href="#visi-misi" className="text-gray-300 hover:text-[#ffd704] transition-colors text-sm font-poppins">{lang === 'id' ? 'Visi & Misi' : 'Vision & Mission'}</a></li>
-                    <li><a href="#sejarah" className="text-gray-300 hover:text-[#ffd704] transition-colors text-sm font-poppins">{lang === 'id' ? 'Sejarah & Budaya' : 'History & Culture'}</a></li>
-                    <li><a href="#struktur" className="text-gray-300 hover:text-[#ffd704] transition-colors text-sm font-poppins">{lang === 'id' ? 'Struktur Pokdarwis' : 'Pokdarwis Structure'}</a></li>
+                    <li><a href="/profil-desa" className="text-gray-300 hover:text-[#ffd704] transition-colors text-sm font-poppins">{String(lang) === 'id' ? 'Profil Desa Silungkang Oso' : 'Silungkang Oso Village Profile'}</a></li>
+                    <li><a href="#visi-misi" className="text-gray-300 hover:text-[#ffd704] transition-colors text-sm font-poppins">{String(lang) === 'id' ? 'Visi & Misi' : 'Vision & Mission'}</a></li>
+                    <li><a href="#sejarah" className="text-gray-300 hover:text-[#ffd704] transition-colors text-sm font-poppins">{String(lang) === 'id' ? 'Sejarah & Budaya' : 'History & Culture'}</a></li>
+                    <li><a href="#struktur" className="text-gray-300 hover:text-[#ffd704] transition-colors text-sm font-poppins">{String(lang) === 'id' ? 'Struktur Pokdarwis' : 'Pokdarwis Structure'}</a></li>
                   </ul>
                 </div>
 
                 {/* Wisata */}
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-4 font-poppins">
-                    {lang === 'id' ? 'Wisata' : 'Tourism'}
+                    {String(lang) === 'id' ? 'Wisata' : 'Tourism'}
                   </h4>
                   <ul className="space-y-2">
-                    <li><a href="/potensi-desa" className="text-gray-300 hover:text-[#ffd704] transition-colors text-sm font-poppins">{lang === 'id' ? 'Destinasi Wisata' : 'Tourist Destinations'}</a></li>
-                    <li><a href="/paket-wisata" className="text-gray-300 hover:text-[#ffd704] transition-colors text-sm font-poppins">{lang === 'id' ? 'Paket Wisata' : 'Tour Packages'}</a></li>
-                    <li><a href="/galeri" className="text-gray-300 hover:text-[#ffd704] transition-colors text-sm font-poppins">{lang === 'id' ? 'Galeri Foto & Video' : 'Photo & Video Gallery'}</a></li>
-                    <li><a href="#budaya" className="text-gray-300 hover:text-[#ffd704] transition-colors text-sm font-poppins">{lang === 'id' ? 'Budaya & Tradisi' : 'Culture & Tradition'}</a></li>
+                    <li><a href="/potensi-desa" className="text-gray-300 hover:text-[#ffd704] transition-colors text-sm font-poppins">{String(lang) === 'id' ? 'Destinasi Wisata' : 'Tourist Destinations'}</a></li>
+                    <li><a href="/paket-wisata" className="text-gray-300 hover:text-[#ffd704] transition-colors text-sm font-poppins">{String(lang) === 'id' ? 'Paket Wisata' : 'Tour Packages'}</a></li>
+                    <li><a href="/galeri" className="text-gray-300 hover:text-[#ffd704] transition-colors text-sm font-poppins">{String(lang) === 'id' ? 'Galeri Foto & Video' : 'Photo & Video Gallery'}</a></li>
+                    <li><a href="#budaya" className="text-gray-300 hover:text-[#ffd704] transition-colors text-sm font-poppins">{String(lang) === 'id' ? 'Budaya & Tradisi' : 'Culture & Tradition'}</a></li>
                   </ul>
                 </div>
 
                 {/* Layanan */}
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-4 font-poppins">
-                    {lang === 'id' ? 'Layanan' : 'Services'}
+                    {String(lang) === 'id' ? 'Layanan' : 'Services'}
                   </h4>
                   <ul className="space-y-2">
-                    <li><a href="/pembelian-tiket" className="text-gray-300 hover:text-[#ffd704] transition-colors text-sm font-poppins">{lang === 'id' ? 'Pemesanan Tiket' : 'Ticket Booking'}</a></li>
-                    <li><a href="/produk-lokal" className="text-gray-300 hover:text-[#ffd704] transition-colors text-sm font-poppins">{lang === 'id' ? 'UMKM & Souvenir' : 'MSMEs & Souvenirs'}</a></li>
-                    <li><a href="#kuliner" className="text-gray-300 hover:text-[#ffd704] transition-colors text-sm font-poppins">{lang === 'id' ? 'Kuliner Khas' : 'Local Cuisine'}</a></li>
+                    <li><a href="/pembelian-tiket" className="text-gray-300 hover:text-[#ffd704] transition-colors text-sm font-poppins">{String(lang) === 'id' ? 'Pemesanan Tiket' : 'Ticket Booking'}</a></li>
+                    <li><a href="/produk-lokal" className="text-gray-300 hover:text-[#ffd704] transition-colors text-sm font-poppins">{String(lang) === 'id' ? 'UMKM & Souvenir' : 'MSMEs & Souvenirs'}</a></li>
+                    <li><a href="#kuliner" className="text-gray-300 hover:text-[#ffd704] transition-colors text-sm font-poppins">{String(lang) === 'id' ? 'Kuliner Khas' : 'Local Cuisine'}</a></li>
 
                   </ul>
                 </div>
@@ -865,11 +868,11 @@ export default function Home() {
               <div className="border-t border-gray-600 mt-8 pt-8">
                 <div className="flex flex-col md:flex-row justify-between items-center">
                   <div className="text-gray-300 text-sm font-poppins mb-4 md:mb-0">
-                    © 2025 {lang === 'id' ? 'Desa Wisata Silungkang Oso.' : 'Silungkang Oso Tourism Village. All rights reserved. Managed by Pokdarwis Silungkang Oso Village'}
+                    © 2025 {String(lang) === 'id' ? 'Desa Wisata Silungkang Oso.' : 'Silungkang Oso Tourism Village. All rights reserved. Managed by Pokdarwis Silungkang Oso Village'}
                   </div>
                   
                   <div className="flex items-center space-x-4">
-                    <span className="text-gray-300 text-sm font-poppins">{lang === 'id' ? 'Ikuti Kami:' : 'Follow Us:'}</span>
+                    <span className="text-gray-300 text-sm font-poppins">{String(lang) === 'id' ? 'Ikuti Kami:' : 'Follow Us:'}</span>
                     <div className="flex space-x-3">
                       <a href="https://www.facebook.com/share/1GrwJ7mndi/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-gray-700 rounded flex items-center justify-center hover:bg-[#ffd704] transition-colors">
                         <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
