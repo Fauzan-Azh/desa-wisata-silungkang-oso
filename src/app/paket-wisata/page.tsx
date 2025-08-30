@@ -1,23 +1,11 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useLanguage } from '../_components/LanguageProvider';
+import { useState } from 'react';
 import LanguageToggle from '../_components/LanguageToggle';
 
 export default function PaketWisata() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [activePage, setActivePage] = useState('Paket Wisata');
   const [isMobileOpen, setIsMobileOpen] = useState(false);
-  const { lang } = useLanguage();
-
-  const handleScroll = () => {
-    setIsScrolled(window.scrollY > 50);
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const navItems = [
     { name: 'Beranda', href: '/' },

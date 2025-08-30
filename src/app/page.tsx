@@ -231,7 +231,7 @@ export default function Home() {
                         <p>
                           Silungkang Oso Village has a very diverse cultural richness. Traditional activities such as <strong>traditional speeches</strong>, <strong>taktumbin</strong>, <strong>turun mandi</strong>, <strong>bakau</strong>, and <strong>manjalang mintuo</strong> are still preserved by the community.
                           <br /><br />
-                          Religious activities such as <strong>yasinan</strong> and <strong>3-100 day commemorations</strong> for someone's passing are an important part of the community's social life.
+                          Religious activities such as <strong>yasinan</strong> and <strong>3-100 day commemorations</strong> for someone&apos;s passing are an important part of the community&apos;s social life.
                           <br /><br />
                           Cultural traditions such as <strong>randai</strong>, <strong>marunguih</strong>, and <strong>talempong botuang</strong> which are recognized as intangible cultural heritage continue to be preserved. Even the village children preserve traditional games, as seen from <strong>Bukit Guak Kumbuah</strong> which is almost every evening filled with children playing kites.
                         </p>
@@ -308,7 +308,7 @@ export default function Home() {
                             Desa Silungkang Oso memiliki sejarah panjang sebagai pusat budaya Minangkabau. Dikenal dengan kerajinan songket yang telah diwariskan turun-temurun selama berabad-abad, desa ini menjadi saksi bisu perkembangan seni dan budaya Sumatera Barat.
                           </p>
                           <p>
-                            Nama "Silungkang" sendiri berasal dari kata "Si Lungkang" yang berarti "tempat yang tinggi", menggambarkan posisi geografis desa yang berada di dataran tinggi dengan pemandangan yang menakjubkan.
+                            Nama &quot;Silungkang&quot; sendiri berasal dari kata &quot;Si Lungkang&quot; yang berarti &quot;tempat yang tinggi&quot;, menggambarkan posisi geografis desa yang berada di dataran tinggi dengan pemandangan yang menakjubkan.
                           </p>
                         </>
                       ) : (
@@ -317,7 +317,7 @@ export default function Home() {
                             Silungkang Oso Village has a long history as a center of Minangkabau culture. Known for its songket craft that has been passed down for centuries, this village has been a silent witness to the development of art and culture in West Sumatra.
                           </p>
                           <p>
-                            The name "Silungkang" itself comes from the word "Si Lungkang" which means "high place", describing the geographical position of the village located on a highland with stunning views.
+                            The name &quot;Silungkang&quot; itself comes from the word &quot;Si Lungkang&quot; which means &quot;high place&quot;, describing the geographical position of the village located on a highland with stunning views.
                           </p>
                         </>
                       )}
