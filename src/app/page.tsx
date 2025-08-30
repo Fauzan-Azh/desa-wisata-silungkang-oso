@@ -220,18 +220,201 @@ export default function Home() {
                   <div className="flex justify-center">
                     <div className="prose prose-lg max-w-none text-gray-700 font-poppins leading-relaxed text-justify">
                       {lang === 'id' ? (
-                        <p>
+                        <>
+                          <p className="mb-4">
                           Desa Silungkang Oso terletak di Kecamatan Silungkang, Kota Sawahlunto, Sumatera Barat, dengan luas wilayah sekitar 6,57 km². Desa ini berjarak sekitar 78 km dari Kota Padang dengan waktu tempuh sekitar 2 jam menggunakan kendaraan roda empat. Desa ini berada pada ketinggian antara 267 hingga 710 meter di atas permukaan laut, dengan suhu udara tahunan sekitar 22°C, sehingga memiliki iklim yang sejuk dan nyaman.
-                          <br />
-                          <br />
+                          </p>
+                          
+                          {/* Kondisi Geografis */}
+                          <div className="mb-6">
+                            <h4 className="text-lg font-bold mb-4 text-gray-800 font-poppins text-center">
+                              {lang === 'id' ? 'Kondisi Geografis' : 'Geographic Conditions'}
+                            </h4>
+                            
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                              {/* Lokasi */}
+                              <div className="text-center">
+                                <div className="flex justify-center mb-2">
+                                  <svg className="w-8 h-8 text-[#ffd704]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                  </svg>
+                                </div>
+                                <h5 className="text-sm font-bold mb-2 text-gray-800 font-poppins">
+                                  {lang === 'id' ? 'Lokasi' : 'Location'}
+                                </h5>
+                                <div className="space-y-1 text-gray-600 font-poppins text-xs">
+                                  <div>{lang === 'id' ? 'Kecamatan Silungkang' : 'Silungkang District'}</div>
+                                  <div>{lang === 'id' ? 'Kota Sawahlunto' : 'Sawahlunto City'}</div>
+                                  <div>{lang === 'id' ? 'Sumatera Barat' : 'West Sumatra'}</div>
+                                </div>
+                              </div>
+
+                              {/* Luas Wilayah */}
+                              <div className="text-center">
+                                <div className="flex justify-center mb-2">
+                                  <svg className="w-8 h-8 text-[#ffd704]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                                  </svg>
+                                </div>
+                                <h5 className="text-sm font-bold mb-2 text-gray-800 font-poppins">
+                                  {lang === 'id' ? 'Luas Wilayah' : 'Area'}
+                                </h5>
+                                <div className="space-y-1 text-gray-600 font-poppins text-xs">
+                                  <div>6,57 km²</div>
+                                </div>
+                              </div>
+
+                              {/* Ketinggian */}
+                              <div className="text-center">
+                                <div className="flex justify-center mb-2">
+                                  <svg className="w-8 h-8 text-[#ffd704]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                                  </svg>
+                                </div>
+                                <h5 className="text-sm font-bold mb-2 text-gray-800 font-poppins">
+                                  {lang === 'id' ? 'Ketinggian' : 'Altitude'}
+                                </h5>
+                                <div className="space-y-1 text-gray-600 font-poppins text-xs">
+                                  <div>267-710 mdpl</div>
+                                  <div>{lang === 'id' ? 'iklim sejuk' : 'cool climate'}</div>
+                                  <div>{lang === 'id' ? 'suhu 22°C' : 'temperature 22°C'}</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <p className="mb-6">
                           Penduduk Desa Silungkang Oso berjumlah sekitar 1.574 jiwa, terdiri dari laki-laki dan perempuan. Desa ini terdiri dari empat dusun utama: Lubuk Kubang, Sungai Cacang, Sawah Darek, dan Kebun Jeruk. Mata pencaharian utama masyarakatnya meliputi pertanian, bertenun (songket), dan berdagang. Di bidang pertanian, mereka menanam berbagai tanaman seperti kemiri, kulit manis, kakao, jagung, padi, bawang, dan ubi. Sedangkan di bidang bertenun, kegiatan tersebut telah dilakukan secara turun-temurun dan merupakan bagian penting dari budaya desa.
                         </p>
+                          
+                          {/* Data Stats */}
+                          <div className="grid grid-cols-2 gap-6">
+                            {/* History Stats */}
+                            <div className="text-center">
+                              <div className="flex justify-center mb-3">
+                                <svg className="w-8 h-8 text-[#ffd704]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                              </div>
+                              <div className="text-3xl font-bold text-gray-800 font-poppins mb-2">300+</div>
+                              <div className="text-sm text-gray-600 font-poppins">
+                                {lang === 'id' ? 'Tahun Sejarah' : 'Years of History'}
+                              </div>
+                            </div>
+                            
+                            {/* Population Stats */}
+                            <div className="text-center">
+                              <div className="flex justify-center mb-3">
+                                <svg className="w-8 h-8 text-[#ffd704]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                              </svg>
+                            </div>
+                            <div className="text-3xl font-bold text-gray-800 font-poppins mb-2">1.574</div>
+                            <div className="text-sm text-gray-600 font-poppins">
+                              {lang === 'id' ? 'Jiwa Penduduk' : 'Population'}
+                            </div>
+                            </div>
+                          </div>
+                        </>
                       ) : (
-                        <p>
-                          Silungkang Oso Village is located in Silungkang District, Sawahlunto City, West Sumatra, with an area of approximately 6.57 km². The village is about 78 km from Padang City with a travel time of about 2 hours by four-wheeled vehicle. The village is located at an altitude between 267 to 710 meters above sea level, with an annual air temperature of around 22°C, making it have a cool and comfortable climate.
-                          <br /><br />
-                          The population of Silungkang Oso Village is about 1,574 people, consisting of men and women. The village consists of four main hamlets: Lubuk Kubang, Sungai Cacang, Sawah Darek, and Kebun Jeruk. The main livelihoods of the community include agriculture, weaving (songket), and trading. In agriculture, they grow various crops such as candlenut, cinnamon, cocoa, corn, rice, onions, and sweet potatoes. Meanwhile, in weaving, this activity has been carried out from generation to generation and is an important part of the village culture.
-                        </p>
+                        <>
+                          <p className="mb-4">
+                            Silungkang Oso Village is located in Silungkang District, Sawahlunto City, West Sumatra, with an area of approximately 6.57 km². The village is about 78 km from Padang City with a travel time of about 2 hours by four-wheeled vehicle. The village is located at an altitude between 267 to 710 meters above sea level, with an annual air temperature of around 22°C, making it have a cool and comfortable climate.
+                          </p>
+                          
+                          {/* Kondisi Geografis */}
+                          <div className="mb-6">
+                            <h4 className="text-lg font-bold mb-4 text-gray-800 font-poppins text-center">
+                              {lang === 'id' ? 'Kondisi Geografis' : 'Geographic Conditions'}
+                            </h4>
+                            
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                              {/* Lokasi */}
+                              <div className="text-center">
+                                <div className="flex justify-center mb-2">
+                                  <svg className="w-8 h-8 text-[#ffd704]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                  </svg>
+                                </div>
+                                <h5 className="text-sm font-bold mb-2 text-gray-800 font-poppins">
+                                  {lang === 'id' ? 'Lokasi' : 'Location'}
+                                </h5>
+                                <div className="space-y-1 text-gray-600 font-poppins text-xs">
+                                  <div>{lang === 'id' ? 'Kecamatan Silungkang' : 'Silungkang District'}</div>
+                                  <div>{lang === 'id' ? 'Kota Sawahlunto' : 'Sawahlunto City'}</div>
+                                  <div>{lang === 'id' ? 'Sumatera Barat' : 'West Sumatra'}</div>
+                                </div>
+                              </div>
+
+                              {/* Luas Wilayah */}
+                              <div className="text-center">
+                                <div className="flex justify-center mb-2">
+                                  <svg className="w-8 h-8 text-[#ffd704]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                                  </svg>
+                                </div>
+                                <h5 className="text-sm font-bold mb-2 text-gray-800 font-poppins">
+                                  {lang === 'id' ? 'Luas Wilayah' : 'Area'}
+                                </h5>
+                                <div className="space-y-1 text-gray-600 font-poppins text-xs">
+                                  <div>6,57 km²</div>
+                                </div>
+                              </div>
+
+                              {/* Ketinggian */}
+                              <div className="text-center">
+                                <div className="flex justify-center mb-2">
+                                  <svg className="w-8 h-8 text-[#ffd704]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                                  </svg>
+                                </div>
+                                <h5 className="text-sm font-bold mb-2 text-gray-800 font-poppins">
+                                  {lang === 'id' ? 'Ketinggian' : 'Altitude'}
+                                </h5>
+                                <div className="space-y-1 text-gray-600 font-poppins text-xs">
+                                  <div>267-710 mdpl</div>
+                                  <div>{lang === 'id' ? 'iklim sejuk' : 'cool climate'}</div>
+                                  <div>{lang === 'id' ? 'suhu 22°C' : 'temperature 22°C'}</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <p className="mb-6">
+                            The population of Silungkang Oso Village is about 1,574 people, consisting of men and women. The village consists of four main hamlets: Lubuk Kubang, Sungai Cacang, Sawah Darek, and Kebun Jeruk. The main livelihoods of the community include agriculture, weaving (songket), and trading. In agriculture, they grow various crops such as candlenut, cinnamon, cocoa, corn, rice, onions, and sweet potatoes. Meanwhile, in weaving, this activity has been carried out from generation to generation and is an important part of the village culture.
+                          </p>
+                          
+                          {/* Data Stats */}
+                          <div className="grid grid-cols-2 gap-6">
+                            {/* History Stats */}
+                            <div className="text-center">
+                              <div className="flex justify-center mb-3">
+                                <svg className="w-8 h-8 text-[#ffd704]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                              </div>
+                              <div className="text-3xl font-bold text-gray-800 font-poppins mb-2">300+</div>
+                              <div className="text-sm text-gray-600 font-poppins">
+                                {lang === 'id' ? 'Tahun Sejarah' : 'Years of History'}
+                              </div>
+                            </div>
+                            
+                            {/* Population Stats */}
+                            <div className="text-center">
+                              <div className="flex justify-center mb-3">
+                                <svg className="w-8 h-8 text-[#ffd704]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                              </svg>
+                            </div>
+                            <div className="text-3xl font-bold text-gray-800 font-poppins mb-2">1.574</div>
+                            <div className="text-sm text-gray-600 font-poppins">
+                              {lang === 'id' ? 'Jiwa Penduduk' : 'Population'}
+                            </div>
+                            </div>
+                          </div>
+                        </>
                       )}
                     </div>
                   </div>
@@ -289,6 +472,7 @@ export default function Home() {
                 </div>
               </div>
               
+              
               {/* Sejarah & Budaya Section */}
               <div className="mb-12">
                 <h3 className="text-2xl font-bold mb-8 text-gray-800 font-poppins">
@@ -301,9 +485,9 @@ export default function Home() {
                     {/* Scrollable Content Container */}
                     <div className="max-h-80 overflow-y-auto p-4 mb-8">
                       <div className="prose prose-lg max-w-none text-gray-700 font-poppins leading-relaxed text-justify">
-                        {lang === 'id' ? (
-                          <>
-                            <p className="mb-4">
+                      {lang === 'id' ? (
+                        <>
+                          <p className="mb-4">
                               Desa Silungkang Oso merupakan bagian dari <strong>Kecamatan Silungkang, Kota Sawahlunto, Sumatera Barat</strong>. Kawasan ini memiliki sejarah panjang yang erat kaitannya dengan perjuangan rakyat. Pada <strong>1 Januari 1927</strong>, terjadi sebuah peristiwa besar yang dikenal dengan <strong>Pemberontakan Silungkang</strong>, yaitu perlawanan buruh dan masyarakat terhadap pemerintahan kolonial Belanda. Pemberontakan ini menjadi salah satu tonggak penting dalam sejarah perjuangan kemerdekaan Indonesia, karena menegaskan semangat perlawanan kaum buruh tambang dan masyarakat setempat.
                             </p>
                             <p className="mb-4">
@@ -314,17 +498,17 @@ export default function Home() {
                             </h4>
                             <p className="mb-4">
                               Masyarakat Desa Silungkang Oso dikenal memiliki budaya yang kuat dan terjaga. Salah satu warisan budaya paling terkenal adalah <strong>tenun songket Silungkang</strong>, yang sudah diwariskan secara turun-temurun sejak ratusan tahun lalu. Songket Silungkang memiliki keindahan dan kualitas yang setara dengan songket Pandai Sikek, bahkan menjadi salah satu identitas budaya penting Kota Sawahlunto.
-                            </p>
-                            <p>
+                          </p>
+                          <p>
                               Selain itu, masyarakat masih memelihara berbagai tradisi adat, seperti <strong>pidato adat, taktumbin, turun mandi, bakau, dan manjalang mintuo</strong>. Dalam bidang kesenian, Silungkang Oso dikenal dengan <strong>randai</strong> serta <strong>talempong botuang</strong>, yang telah ditetapkan sebagai <strong>Warisan Budaya Takbenda Indonesia</strong> oleh Kementerian Pendidikan dan Kebudayaan.
                             </p>
                             <p className="mt-4">
                               Kearifan lokal yang terjaga ini tidak hanya memperkuat identitas budaya masyarakat, tetapi juga memberikan daya tarik tersendiri bagi wisatawan yang berkunjung, sehingga menjadikan Silungkang Oso sebagai salah satu destinasi budaya dan sejarah yang penting di Sumatera Barat.
-                            </p>
-                          </>
-                        ) : (
-                          <>
-                            <p className="mb-4">
+                          </p>
+                        </>
+                      ) : (
+                        <>
+                          <p className="mb-4">
                               Silungkang Oso Village is part of <strong>Silungkang District, Sawahlunto City, West Sumatra</strong>. This area has a long history closely related to the people&apos;s struggle. On <strong>January 1, 1927</strong>, a major event known as the <strong>Silungkang Rebellion</strong> occurred, which was a resistance by workers and the community against the Dutch colonial government. This rebellion became one of the important milestones in the history of Indonesia&apos;s independence struggle, as it affirmed the spirit of resistance of the mining workers and local community.
                             </p>
                             <p className="mb-4">
@@ -335,46 +519,19 @@ export default function Home() {
                             </h4>
                             <p className="mb-4">
                               The people of Silungkang Oso Village are known for their strong and well-preserved culture. One of the most famous cultural heritages is <strong>Silungkang songket weaving</strong>, which has been passed down from generation to generation for hundreds of years. Silungkang songket has beauty and quality equivalent to Pandai Sikek songket, even becoming one of the important cultural identities of Sawahlunto City.
-                            </p>
-                            <p>
+                          </p>
+                          <p>
                               In addition, the community still maintains various traditional customs, such as <strong>traditional speeches, taktumbin, turun mandi, bakau, and manjalang mintuo</strong>. In the field of arts, Silungkang Oso is known for <strong>randai</strong> and <strong>talempong botuang</strong>, which have been designated as <strong>Indonesian Intangible Cultural Heritage</strong> by the Ministry of Education and Culture.
                             </p>
                             <p className="mt-4">
                               This preserved local wisdom not only strengthens the cultural identity of the community, but also provides its own attraction for visiting tourists, making Silungkang Oso one of the important cultural and historical destinations in West Sumatra.
-                            </p>
-                          </>
-                        )}
+                          </p>
+                        </>
+                      )}
                       </div>
                     </div>
                     
-                    {/* Data Stats */}
-                    <div className="grid grid-cols-2 gap-8">
-                      {/* History Stats */}
-                      <div className="text-center">
-                        <div className="flex justify-center mb-3">
-                          <svg className="w-10 h-10 text-[#ffd704]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                          </svg>
-                        </div>
-                        <div className="text-4xl font-bold text-gray-800 font-poppins mb-2">300+</div>
-                        <div className="text-sm text-gray-600 font-poppins">
-                          {lang === 'id' ? 'Tahun Sejarah' : 'Years of History'}
-                        </div>
-                      </div>
-                      
-                      {/* Population Stats */}
-                      <div className="text-center">
-                        <div className="flex justify-center mb-3">
-                          <svg className="w-10 h-10 text-[#ffd704]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                          </svg>
-                        </div>
-                        <div className="text-4xl font-bold text-gray-800 font-poppins mb-2">1.574</div>
-                        <div className="text-sm text-gray-600 font-poppins">
-                          {lang === 'id' ? 'Jiwa Penduduk' : 'Population'}
-                        </div>
-                      </div>
-                    </div>
+
                   </div>
                   
                   {/* Right Column - Image & Songket Info */}
@@ -410,64 +567,7 @@ export default function Home() {
               {/* Sub-sections */}
               <div className="space-y-12">
 
-                {/* Kondisi Geografis */}
-                <div>
-                  <h3 className="text-2xl font-bold mb-8 text-gray-800 font-poppins text-center">
-                    {lang === 'id' ? 'Kondisi Geografis' : 'Geographic Conditions'}
-                  </h3>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {/* Lokasi */}
-                    <div className="text-center">
-                      <div className="flex justify-center mb-4">
-                        <svg className="w-12 h-12 text-[#ffd704]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                      </div>
-                      <h4 className="text-lg font-bold mb-4 text-gray-800 font-poppins">
-                        {lang === 'id' ? 'Lokasi' : 'Location'}
-                      </h4>
-                      <div className="space-y-2 text-gray-600 font-poppins">
-                        <div>{lang === 'id' ? 'Kecamatan Silungkang' : 'Silungkang District'}</div>
-                        <div>{lang === 'id' ? 'Kota Sawahlunto' : 'Sawahlunto City'}</div>
-                        <div>{lang === 'id' ? 'Sumatera Barat' : 'West Sumatra'}</div>
-                      </div>
-                    </div>
 
-                    {/* Luas Wilayah */}
-                    <div className="text-center">
-                      <div className="flex justify-center mb-4">
-                        <svg className="w-12 h-12 text-[#ffd704]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
-                        </svg>
-                      </div>
-                      <h4 className="text-lg font-bold mb-4 text-gray-800 font-poppins">
-                        {lang === 'id' ? 'Luas Wilayah' : 'Area'}
-                      </h4>
-                      <div className="space-y-2 text-gray-600 font-poppins">
-                        <div>6,57 km²</div>
-                      </div>
-                    </div>
-
-                    {/* Ketinggian */}
-                    <div className="text-center">
-                      <div className="flex justify-center mb-4">
-                        <svg className="w-12 h-12 text-[#ffd704]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                        </svg>
-                      </div>
-                      <h4 className="text-lg font-bold mb-4 text-gray-800 font-poppins">
-                        {lang === 'id' ? 'Ketinggian' : 'Altitude'}
-                      </h4>
-                      <div className="space-y-2 text-gray-600 font-poppins">
-                        <div>267-710 mdpl</div>
-                        <div>{lang === 'id' ? 'iklim sejuk' : 'cool climate'}</div>
-                        <div>{lang === 'id' ? 'suhu 22°C' : 'temperature 22°C'}</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
 
                 {/* Peta Wisata */}
                 <div>
